@@ -1,12 +1,42 @@
 {
-  "name": "E-SPIN",
-  "title": "ESP32-C3 MINI-1 but Handspinner",
-  "description": "Custom ESP32-C3 board with WS2020C RGB and custom pin mapping",
-  "keywords": ["ESP32-C3", "Custom Board", "Arduino", "ESP-IDF"],
+  "name": "espin",
+  "title": "E-SPIN Platform",
+  "description": "Custom Platform for E-SPIN Board (Wrapper around espressif32)",
   "version": "1.0.0",
   "homepage": "https://github.com/urbskali/e_spin-board",
   "license": "MIT",
-  "frameworks": ["arduino", "espidf"],
-  "platforms": ["espressif32"],
-  "boards": ["boards/e_spin.json"]
+  "frameworks": {
+    "arduino": {
+      "package": "framework-arduinoespressif32",
+      "script": "builder/frameworks/arduino.py"
+    },
+    "espidf": {
+      "package": "framework-espidf",
+      "script": "builder/frameworks/espidf.py"
+    }
+  },
+  "packages": {
+    "toolchain-riscv32-esp": {
+      "type": "toolchain",
+      "owner": "espressif",
+      "version": "~8.4.0"
+    },
+    "framework-arduinoespressif32": {
+      "type": "framework",
+      "optional": true,
+      "owner": "espressif",
+      "version": "~3.20000.0"
+    },
+    "framework-espidf": {
+      "type": "framework",
+      "optional": true,
+      "owner": "espressif",
+      "version": "~3.50000.0"
+    },
+    "tool-esptoolpy": {
+      "type": "uploader",
+      "owner": "espressif",
+      "version": "~1.40500.0"
+    }
+  }
 }

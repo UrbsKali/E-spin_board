@@ -1,6 +1,7 @@
 # E-SPIN Board Definitions
 
 This repository contains the board definition and variants for the **E-SPIN**, a custom ESP32-C3 based board.
+
 ![alt text](image.png)
 
 ## Board Overview
@@ -19,25 +20,43 @@ This repository contains the board definition and variants for the **E-SPIN**, a
 
 ## Installation
 
-### PlatformIO
+### Method 1: Use as a Custom Platform (Recommended)
 
-To use this board in PlatformIO, verify that your project structure includes the `boards/` and `variants/` folders as defined in this repository.
+This repository is configured as a custom PlatformIO platform. This is the easiest way to use the board without copying files.
 
-1. Copy the `boards/e_spin.json` file to your project's `boards/` directory (or the global PlatformIO boards directory).
-2. Copy the `variants/e_spin/` folder to your customized framework variants folder if necessary, or configure your `platformio.ini` to point to the correct variant.
+1.  Open your `platformio.ini`.
+2.  Set the `platform` to point to this repository.
+3.  Set `board = e_spin`.
 
-**Example `platformio.ini`:**
+```ini
+[env:e_spin]
+; Use this repository as the platform
+platform = https://github.com/urbskali/E-spin_board.git
+board = e_spin
+framework = arduino
+; Optional: Fix for some PIO versions to ensure variant is found
+board_build.variants_dir = logic_handled_by_platform_py
+```
+
+*Note: The platform script attempts to automatically point to the variants folder inside the package.*
+
+### Method 2: Manual Installation (Local)
+
+1. Copy `boards/e_spin.json` to your project's `boards/` directory.
+2. Copy the `variants/e_spin` folder to `variants/`.
+3. Update `platformio.ini`:
 
 ```ini
 [env:e_spin]
 platform = espressif32
 board = e_spin
 framework = arduino
-; If the board definition is local to the project
 board_build.variants_dir = variants
-board_build.mcu = esp32c3
-board_build.f_cpu = 160000000L
 ```
+
+### Why `platform_packages` didn't work
+
+Referencing this repository via `platform_packages` (e.g., `espin@git...`) causes an `UnknownBoard` error because PlatformIO resolves the board ID **before** downloading optional packages. By defining this repository as a **Platform** (Method 1), PlatformIO downloads it first to find the board definition, and then proceeds to install dependencies (like the Arduino framework) as defined in `platform.json`.
 
 ## Pin Definitions
 

@@ -18,24 +18,24 @@
   "packages": {
     "toolchain-riscv32-esp": {
       "type": "toolchain",
-      "owner": "espressif",
+      "owner": "platformio",
       "version": "~8.4.0"
     },
     "framework-arduinoespressif32": {
       "type": "framework",
       "optional": true,
-      "owner": "espressif",
+      "owner": "platformio",
       "version": "~3.20000.0"
     },
     "framework-espidf": {
       "type": "framework",
       "optional": true,
-      "owner": "espressif",
+      "owner": "platformio",
       "version": "~3.50000.0"
     },
     "tool-esptoolpy": {
       "type": "uploader",
-      "owner": "espressif",
+      "owner": "platformio",
       "version": "~1.40500.0"
     }
   }

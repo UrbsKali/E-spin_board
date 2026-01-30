@@ -1,0 +1,12 @@
+{
+  "name": "E-SPIN",
+  "title": "ESP32-C3 MINI-1 but Handspinner",
+  "description": "Custom ESP32-C3 board with WS2020C RGB and custom pin mapping",
+  "keywords": ["ESP32-C3", "Custom Board", "Arduino", "ESP-IDF"],
+  "version": "1.0.0",
+  "homepage": "https://github.com/urbskali/e_spin-board",
+  "license": "MIT",
+  "frameworks": ["arduino", "espidf"],
+  "platforms": ["espressif32"],
+  "boards": ["boards/e_spin.json"]
+}

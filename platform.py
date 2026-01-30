@@ -15,7 +15,7 @@
 import os
 from platformio.public import PlatformBase
 
-class ESpinPlatform(PlatformBase):
+class EspinPlatform(PlatformBase):
     
     def configure_default_packages(self, variables, targets):
         # This platform is a wrapper around "espressif32"

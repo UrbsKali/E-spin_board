@@ -49,10 +49,10 @@ static const uint8_t A0 = 2;
 // Digital Pin Map (Logical Order)
 // -----------------------------
 
-static const uint8_t D0  = 5;
-static const uint8_t D1  = 6;
-static const uint8_t D2  = 7;
-static const uint8_t D3  = 8;
-static const uint8_t D4  = 10;
+static const uint8_t D0  = 20; // RX
+static const uint8_t D1  = 5;
+static const uint8_t D2  = 6;
+static const uint8_t D3  = 7;
+static const uint8_t D4  = 8;
 static const uint8_t D5  = 0;
 static const uint8_t D6  = 1;

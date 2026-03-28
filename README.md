@@ -2,7 +2,7 @@
 
 This repository contains the board definition and variants for the **E-SPIN**, a custom ESP32-C3 based board.
 
-![alt text](image.png)
+![E-SPIN Board rev3](image.png)
 
 ## Board Overview
 
@@ -10,7 +10,7 @@ This repository contains the board definition and variants for the **E-SPIN**, a
 - **MCU**: ESP32-C3 (RISC-V Single Core)
 - **Clock Speed**: 160 MHz
 - **Flash Size**: 4 MB
-- **Description**: A custom ESP32-C3 MINI-1 board designed as a handspinner, featuring WS2020C RGB LEDs and custom pin mapping.
+- **Description**: A custom ESP32-C3 WROOM board designed as a handspinner, featuring WS2020C RGB LEDs and custom pin mapping.
 
 ## Features
 

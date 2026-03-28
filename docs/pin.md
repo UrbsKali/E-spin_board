@@ -14,5 +14,6 @@ Here is the pin function on the E-Spin :
 | 6      | 7           | 7              | GPIO7                |            |            |
 | 7      | 8           | 8              | Interrupt pin of IMU |            |            |
 | 8      | 9           | 9              | Boot Button          |            |            |
+| 10     | 10          | 10             | RGB LED              |            |            |
 | 13     | 18          | NC             | USB D-               |            |            |
 | 14     | 19          | NC             | USB D+               |            |            |
